@@ -1,0 +1,441 @@
+\documentclass{ws-ijbc}
+\usepackage{ws-rotating}     % used only when sideways tables/figures are used
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{adjustbox}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{listings}
+\usepackage{xcolor}
+\setcitestyle{numbers,square}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{rem}{Remark}
+\newtheorem{cor}{Corollary}
+\newtheorem{con}{Conjecture}
+
+
+\begin{document}
+
+\catchline{}{}{}{}{} % Publisher's Area please ignore
+
+
+\markboth{X.Jin et al.}{Coexistence and Bifurcations in a Tri-Trophic Intraguild Predation Model}
+
+\title{Appendixes are included for review only, which will be removed if the paper can be accepted for publication.
+}
+
+\author{Xiangxiang Jin}
+
+\address{School of Sciences, Southwest Petroleum University\\
+ Chengdu, Sichuan 610500, China}
+
+\author{Lingling Liu}
+\address{School of Sciences, Southwest Petroleum University\\
+ Chengdu, Sichuan 610500, China\\
+Data Recovery Key Laboratory of Sichuan Province\\
+College of Mathematics and Information Science, Neijiang Normal University\\
+Neijiang, Sichuan 641100, China\\
+a600aa@163.com}
+
+\author{Yong-Guo Shi\footnote{Corresponding author.
+E-mail addresses: scumat@163.com}}
+\address{Data Recovery Key Laboratory of Sichuan Province\\
+College of Mathematics and Information Science, Neijiang Normal University\\
+Neijiang, Sichuan 641100, China\\
+scumat@163.com}
+
+
+
+\maketitle
+\newpage
+
+
+\section*{Appendixes are included for review only, which will be removed if the paper can be accepted for publication.}
+
+\appendix{Sets and matlab code of $\mathcal{S}$ in Theorem 2.2}
+\subsection*{A.1~Sets of parameters}
+\begin{equation*}
+  \begin{aligned}
+  \mathcal{I}_{3}\cap\mathcal{B}_{2}&=\left\{\mu\in\mathcal{R}
+  \big| 0<d_{1}<\frac{1}{1+\alpha_{1}}, e_{2}\varrho<\varpi, \frac{e_{2}}{h}<d_{2}<\frac{1}{1+\alpha_{2}}+\frac{e_{2}}{h}, \frac{d_{1}}{1-\alpha_{1}d_{1}}<\kappa_{1}<\kappa_{2}<1 \right\},\\
+  \mathcal{I}_{3}\cap\mathcal{B}_{11} &= \left\{\mu\in\mathcal{R} \big|
+  0<d_{1}<\frac{1}{1+\alpha_{1}}, e_{2}\varrho<\varpi, \max\{\frac{1}{1+\alpha_{2}},\frac{e_{2}}{h}\}<d_{2}<\min\{\frac{1}{1+\alpha_{2}}+\frac{e_{2}}{h},1\}, \right.\\
+  &\qquad\left.\frac{d_{1}}{1-\alpha_{1}d_{1}}<\kappa_{1}<\kappa_{2}<1 \right\},\\
+    \mathcal{I}_{21}\cap\mathcal{B}_{2}&=\left\{\mu\in\mathcal{R}
+  \big| 0<d_{1}<\frac{1}{1+\alpha_{1}}, e_{2}\varrho<\varpi, \frac{e_{2}}{h}<d_{2}<\frac{1}{1+\alpha_{2}},\kappa_{2}<1 \right\},\\
+  \mathcal{I}_{22}\cap\mathcal{B}_{2}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho\geq\varpi, \frac{e_{2}}{h}<d_{2}<\frac{1}{1+\alpha_{2}},\frac{d_{1}}{1-\alpha_{1}d_{1}}<\kappa_{2}<1 \right\},\\
+\mathcal{I}_{21}\cap\mathcal{B}_{11}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho<\varpi, \max\{\frac{1}{1+\alpha_{2}},\frac{e_{2}}{h}\}<d_{2}<\min\{\frac{1}{1+\alpha_{2}}+\frac{e_{2}}{h},1\}, \kappa_{2}<1 \right\},\\
+\mathcal{I}_{22}\cap\mathcal{B}_{11}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho\geq\varpi, \max\{\frac{1}{1+\alpha_{2}},\frac{e_{2}}{h}\}<d_{2}<\min\{\frac{1}{1+\alpha_{2}}+\frac{e_{2}}{h},1\},\right.\\
+&\qquad\left.\frac{d_{1}}{1-\alpha_{1}d_{1}}<\kappa_{2}<1 \right\},\\
+\mathcal{I}_{11}\cap\mathcal{B}_{2}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho<\varpi,\frac{e_{2}}{h}<d_{2}<\min\{\frac{1}{1+\alpha_{2}},\kappa_{2}<1 \right\},\\
+\mathcal{I}_{12}\cap\mathcal{B}_{2}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho\leq\varpi,\frac{e_{2}}{h}<d_{2}<\min\{\frac{1}{1+\alpha_{2}},\kappa_{1}<\frac{d_{1}}{1-\alpha_{1}d_{1}}, \kappa_{2}<1 \right\},\\
+\mathcal{I}_{13}\cap\mathcal{B}_{2}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho<\varpi,\frac{e_{2}}{h}<d_{2}<\min\{\frac{1}{1+\alpha_{2}},\frac{d_{1}}{1-\alpha_{1}d_{1}}<\kappa_{1}<1<\kappa_{2} \right\},\\
+\mathcal{I}_{14}\cap\mathcal{B}_{2}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho<\varpi,\frac{e_{2}}{h}<d_{2}<\min\{\frac{1}{1+\alpha_{2}},\kappa_{1}<\frac{d_{1}}{1-\alpha_{1}d_{1}}<\kappa_{2}<1 \right\},\\
+\mathcal{I}_{01}\cap\mathcal{B}_{2}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho\geq\varpi,\frac{e_{1}+[(1+\alpha_{1})d_{1}-1]e_{2}}{e_{1}(1+\alpha_{2})}<d_{2}<\frac{1}{1+\alpha_{2}},  \kappa_{2}<\frac{d_{1}}{1-\alpha_{1}d_{1}}\right\},\\
+\mathcal{I}_{02}\cap\mathcal{B}_{2}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho<\varpi, 0<d_{2}\leq\frac{e_{1}+[(1+\alpha_{1})d_{1}-1]e_{2}}{e_{1}(1+\alpha_{2})}, \kappa_{2}<\frac{d_{1}}{1-\alpha_{1}d_{1}} \right\},\\
+\mathcal{I}_{03}\cap\mathcal{B}_{2}&=\left\{\mu\in \mathcal{R}\big|0<d_{1}<\frac{1}{1+\alpha_{1}},0<d_{2}<\frac{1}{1+\alpha_{2}},\kappa_{1}>1\right\},\\
+\mathcal{I}_{04}\cap\mathcal{B}_{2}&=\left\{\mu\in \mathcal{R}\big|0<d_{1}<\frac{1}{1+\alpha_{1}},0<d_{2}<\frac{1}{1+\alpha_{2}},e_{2}\varrho>\varpi\right\},\\
+\mathcal{I}_{11}\cap\mathcal{B}_{11}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho<\varpi, \max\{\frac{1}{1+\alpha_{2}},\frac{e_{2}}{h}\}<d_{2}<\min\{\frac{1}{1+\alpha_{2}}+\frac{e_{2}}{h},1\},
+,\kappa_{2}<1\right\},\\
+\mathcal{I}_{12}\cap\mathcal{B}_{11}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho\leq\varpi, \max\{\frac{1}{1+\alpha_{2}},\frac{e_{2}}{h}\}<d_{2}<\min\{\frac{1}{1+\alpha_{2}}+\frac{e_{2}}{h},1\},\right.\\
+&\qquad\left.\kappa_{1}<\frac{d_{1}}{1-\alpha_{1}d_{1}}, \kappa_{2}<1\right\},\\
+\end{aligned}
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
+\mathcal{I}_{13}\cap\mathcal{B}_{11}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho<\varpi,\max\{\frac{1}{1+\alpha_{2}},\frac{e_{2}}{h}\}<d_{2}<\min\{\frac{1}{1+\alpha_{2}}+\frac{e_{2}}{h},1\},\right.\\
+&\qquad\left.\frac{d_{1}}{1-\alpha_{1}d_{1}}<\kappa_{1}<1<\kappa_{2}\right\},\\
+\mathcal{I}_{14}\cap\mathcal{B}_{11}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho<\varpi, \max\{\frac{1}{1+\alpha_{2}},\frac{e_{2}}{h}\}<d_{2}<\min\{\frac{1}{1+\alpha_{2}}+\frac{e_{2}}{h},1\},\right.\\
+&\qquad\left.\kappa_{1}<\frac{d_{1}}{1-\alpha_{1}d_{1}}<\kappa_{2}<1\right\},\\
+\mathcal{I}_{01}\cap\mathcal{B}_{11}&=\left\{\mu\in \mathcal{R}
+\big|0<d_{1}<\frac{1}{1+\alpha_{1}},e_{2}\varrho\geq\varpi,\frac{1}{1+\alpha_{2}}\leq d_{2}<1, \kappa_{2}<\frac{d_{1}}{1-\alpha_{1}d_{1}}\right\},\\
+\mathcal{I}_{03}\cap\mathcal{B}_{11}&=\left\{\mu\in \mathcal{R}\big|0<d_{1}<\frac{1}{1+\alpha_{1}},\frac{1}{1+\alpha_{2}}\leq d_{2}<1,\kappa_{1}>1\right\},\\
+\mathcal{I}_{04}\cap\mathcal{B}_{11}&=\left\{\mu\in \mathcal{R}\big|0<d_{1}<\frac{1}{1+\alpha_{1}},\frac{1}{1+\alpha_{2}}\leq d_{2}<1,e_{2}\varrho>\varpi\right\}.
+  \end{aligned}
+\end{equation*}
+\subsection*{A.2~Matlab code for $\mathcal{S}$}
+
+\begin{lstlisting}[language=Matlab, caption={Matlab code for computing symbolic sequence $\mathcal{S}$}, label={lst:matlab_code}]
+alpha = zeros(1,2); d = zeros(1,2); e = zeros(1,2); A = zeros(1,4);
+alpha(1)=input('Please enter alpha[1]:'); alpha(2)=input('Please enter alpha[2]:');
+d(1)=input('Please enter d[1]:'); d(2)=input('Please enter d[2]:');
+e(1)=input('Please enter e[1]:'); e(2)=input('Please enter e[2]:');
+h = input('Please enter h:');A(1)=e(1)*d(2)*(1+h) - e(2)*(d(1)+e(1));
+A(2)=e(2)(1-alpha(1)*d(1))e(1)((alpha(2)d(2)-1-h)+(1-alpha(1)-alpha(2))(e(2)-h*d(2)));
+A(3)=e(1)*alpha(1)*(e(2)-h*d(2)) + e(1)*(1-alpha(1))*(h + (e(2)-h*d(2))*alpha(2));
+A(4)=e(1)*alpha(1)*(h + (e(2)-h*d(2))*alpha(2));
+Delta=(A(2)*A(3)-9*A(1)*A(4))^2 - 4*(A(3)^2-3*A(2)*A(4))*(A(2)^2-3*A(1)*A(3));
+symbol_Sequence = arrayfun(@(x) '+', A, 'UniformOutput', false);
+symbol_Sequence(A < 0) = {'-'};
+symbol_Sequence(A == 0) = {'0'};
+if Delta > 0
+    symbol_Sequence{5} = '+';
+elseif Delta < 0
+    symbol_Sequence{5} = '-';
+else
+    symbol_Sequence{5} = '0';
+end
+disp('symbolic Sequence S is:');
+disp(['[A[0], A[1], A[2], A[3], Delta]=', ...
+      '[', strjoin(symbol_Sequence, ','), ']']);
+\end{lstlisting}
+
+\subsection*{A.3~Expressions}
+
+The expressions in Theorem~4.2 is
+{\small
+\begin{eqnarray*}
+&&T_{1}\Psi_{1} +\Psi_{2} T_{2}=
+\{-\alpha_{2}\gamma_{2}\left(\alpha_{2}-1\right)^{2}[\gamma_{1} \gamma_{2} \left(\alpha_{2}+4\right) \left(1+\alpha_{2}\right)^{3} \left(\alpha_{1} \alpha_{2}-\alpha_{1}+2 \alpha_{2}\right)^{2} e_{1}
++4\left( \alpha_{1}^{2}+4\alpha_{1}+2 \gamma_{1}+4\right) \alpha_{2}^{6}
+\\&&~~~~~
++4\left(\alpha_{1} \gamma_{1} \gamma_{2}+2 \gamma_{1} \gamma_{2}+4 \alpha_{1}+8 \gamma_{1}+8\right) \alpha_{2}^{5}+\left(\left(-4 \gamma_{1} \gamma_{2}-8 \gamma_{1}-8\right) \alpha_{1}^{2}+\left(-4 \gamma_{1} \gamma_{2}-32 \gamma_{1}-16\right) \alpha_{1}+16
++\left(8 \gamma_{2}+24\right) \gamma_{1}\right)
+\\&&~~~~~
+\alpha_{2}^{4}
++\left(-4 \alpha_{1}^{2} \gamma_{1} \gamma_{2}+\left(-52 \gamma_{1} \gamma_{2}-32 \gamma_{1}-16\right) \alpha_{1}-72 \gamma_{1} \gamma_{2}\right) \alpha_{2}^{3}-20 \gamma_{2} \left(3\alpha_{1}+4\right) \gamma_{1} \alpha_{1} \alpha_{2}
++(\left(44 \gamma_{1} \gamma_{2}+8 \gamma_{1}+4\right) \alpha_{1}^{2}
+\\&&~~~~~
++132 \alpha_{1} \gamma_{1} \gamma_{2}+56 \gamma_{1} \gamma_{2}) \alpha_{2}^{2}+24 \alpha_{1}^{2} \gamma_{1} \gamma_{2}]\};
+\end{eqnarray*}
+\begin{eqnarray*}
+&&
+P_{2}\mid\tilde{d}_{1}= -\gamma_{2}\vartheta_{1}e_{2}^{3} \left(\bar x \alpha_{1}+1\right)^{2} \left(\bar x \alpha_{2}+1\right) \left[\left(\bar x \alpha_{2}+1\right)\vartheta_{1}\vartheta_{2}\gamma_{1}+\bar x \left(\bar x -1\right) \left(\bar x \alpha_{1}+1\right)\right]+\vartheta_{1}\vartheta_{2}\{\gamma_{2} \left(\bar x \alpha_{1}+1\right)^{2}
+\\&&~~~~~
+\left[2 h \left(\bar x \alpha_{2}+1\right)\vartheta_{1}\vartheta_{2}\gamma_{1}+\bar x \left(h \bar x^{2} \alpha_{1}-h \bar x \alpha_{1}+h \bar x -h -1\right)\right]
++\bar x \gamma_{1} \left(\bar x \alpha_{2}+1\right)[\left(\bar x \alpha_{1}+1\right)^{2} \left(2 \bar x \alpha_{2}-\alpha_{2}+1\right) \vartheta_{1} h
+\\&&~~~~~
++\bar x \alpha_{2}+1]\}-h \gamma_{1} e_{2}\vartheta_{1}^{2} \vartheta_{2}^{2} \{h \left(\bar x \alpha_{1}+1\right)^{2}\left[\vartheta_{2}\gamma_{2}+\bar x \left(2\bar  x \alpha_{2}-\alpha_{2}+1\right)\right]+\bar x \left(\alpha_{1}-\alpha_{2}\right)\};
+\\&&
+P_{1}'P_{2}\mid\tilde{d}_{1}=\{-\gamma_{2}\vartheta_{1}e_{2}^{3} \left(\bar x \alpha_{1}+1\right)^{2} \left(\alpha_{2} \bar x +1\right) \left[\left(\alpha_{2} \bar x +1\right)\vartheta_{1}\vartheta_{2}\gamma_{1}+\bar x \left(\bar x -1\right) \left(\bar x \alpha_{1}+1\right)\right]
++\vartheta_{1}\vartheta_{2}\{\gamma_{2} \left(\bar x \alpha_{1}+1\right)^{2}
+\\&&~~~~~
+\left[2 h \left(\alpha_{2}\bar  x +1\right)\vartheta_{1}\vartheta_{2}\gamma_{1}+\bar x \left(h\bar x^{2} \alpha_{1}-h\bar x \alpha_{1}+h \bar x -h -1\right)\right]
++\bar x \gamma_{1} \left(\alpha_{2} \bar x +1\right)[\left(\bar x \alpha_{1}+1\right)^{2} \left(2 \alpha_{2} \bar x
+-\alpha_{2}+1\right)\vartheta_{1}h
+\\&&~~~~~
++\alpha_{2}\bar  x +1]\}-h \gamma_{1} e_{2} \vartheta_{1}^{2}\vartheta_{2}^{2} \{h \left(\bar x \alpha_{1}+1\right)^{2} \left[\vartheta_{2}\gamma_{2}+\bar x \left(2 \alpha_{2} \bar x -\alpha_{2}+1\right)\right]+\bar x \left(\alpha_{1}-\alpha_{2}\right)\}
+\}[\gamma_{1} e_{1} \vartheta_{2}^{2} h^{2}-\gamma_{1} e_{1} \left(\bar x \alpha_{2}+1\right) e_{2} \vartheta_{2} h
+\\&&~~~~~
+-\bar x \alpha_{2} e_{2}^{2}]
+/[h \vartheta_{2}-e_{2} (\bar x \alpha_{2}+1)](\bar x \alpha_{2}+1)e_{1}e_{2}.
+  \end{eqnarray*}
+}
+
+\appendix{Proof of Theorem 4.2.(ii-iii)}
+
+\begin{proof}
+$\mathbf{(ii)}$~~First, we compute the Jacobian matrix of the system at $E_{2}$ as follows
+\begin{equation}\label{jaco5}
+    J_{E_{2}}=\left(
+   \begin{array}{ccc}
+       d_{2}(1+\alpha_{2})-\frac{2d_{2}}{1-\alpha_{2}d_{2}} & \frac{d_{2}}{1+(\alpha_{1}-\alpha_{2})d_{2}} & -d_{2} \\
+      0 & a_{22} & 0 \\
+        \gamma_{2}\left[1-d_{2}(1+\alpha_{2})\right]& \frac{\gamma_{2}e_{2}[1-d_{2}(1+\alpha_{2})]}{(1-\alpha_{2}d_{2})^{2}} & 0 \\
+     \end{array}
+   \right),
+\end{equation}
+and then obtain the corresponding characteristic equation (\ref{eq48})
+\begin{equation}\label{eq48}
+(\lambda-\theta_{1})(\lambda^{2}+\theta_{2}\lambda+\theta_{3}d_{2})=0,
+\end{equation}
+where
+\begin{equation*}
+\begin{aligned}
+&\theta_{1}=\frac{2d_{2}}{1-\alpha_{2}d_{2}}-d_{2}(1+\alpha_{2}),\quad \theta_{3}=\gamma_{2}\left[1-d_{2}(1+\alpha_{2})\right],\\
+&\theta_{2}=\gamma_{1}\left[\frac{d_{2}}{1+(\alpha_{1}-\alpha_{2})d_{2}}-\frac{e_{1}(1-d_{2}(1+\alpha_{2}))}{(1-\alpha_{2}d_{2})^{2}}-d_{1}\right].
+\end{aligned}
+\end{equation*}
+Assuming that equation (\ref{eq48}) has a pair of conjugate complex roots $\lambda_{1,2}=u_{2}(d_{2})\pm iv_{2}(d_{2})$ and $u_{2}(d_{2}^{0})=0$, then by substituting into the equation (\ref{eq48}) and taking the derivative for the bifurcation parameter $d_{2}^{0}=\frac{\alpha_{2}-1}{\alpha_{2}(1+\alpha_{2})}$, and separate the real and imaginary parts. Then we obtain that $
+v_{2}(d_{2}^{0})=\frac{\sqrt{\gamma_{2}(\alpha_{2}^{2}-1)}}{\alpha_{2} \left(\alpha_{2} +1\right)}\neq0$.
+The verification of the transversality condition for the Hopf bifurcation follows a process similar to the proof of Theorem 4.2, and thus is not detailed here for brevity. By calculation, we derive the following formula
+\begin{equation}
+ \frac{\partial u_{2}}{\partial d_{2}}|_{ d_2=d_{2}^{0}}=\frac{\Psi_{1}(d_{2})T_{1}(d_{2})+\Psi_{2}(d_{2})T_{2}(d_{2})}{T_{1}^{2}(d_{2})+T_{2}^{2}(d_{2})},
+\end{equation}
+where
+\begin{equation*}
+\begin{aligned}
+&T_{1}(d_{2})=\theta_{1}\theta_{2}+4d_{2}\theta_{3},\quad \Psi_{2}(d_{2})=-v_{2}(d_{2})\left(\frac{\partial (\theta_{1}\theta_{2})}{\partial d_{2}}+\frac{\partial (d_{2}\theta_{3})}{\partial d_{2}}\right),\\
+&\Psi_{1}(d_{2})=-\frac{\partial (\theta_{1}+\theta_{2})}{\partial d_{2}}+\frac{\partial (d_{2}\theta_{2}\theta_{3})}{\partial d_{2}},\quad T_{2}(d_{2})=2v_{2}(d_{2})(\theta_{1}+\theta_{2}).
+\end{aligned}
+\end{equation*}
+Due to the extensive computation required, we used symbolic computation software. The transversality condition $\frac{\partial u_{2}}{\partial d_{2}}|_{ d_2=d_{2}^{0}}\neq0$ for a Hopf bifurcation is satisfied when the condition $T_{1}\Psi_{1} +\Psi_{2} T_{2}|_{ d_2=d_{2}^{0}}\neq0$ holds. Hence, system (2) will undergo a Hopf bifurcation at the boundary equilibrium $E_{2}$ when the parameter $d_{2}$ crosses the critical value $d_{2}^{0}$.\\
+$\mathbf{(iii)}$~~
+According to the characteristic equation (8) of the system at the interior equilibrium $\bar E$, the equation (8) can be written as 
+\begin{equation}\label{eq411}
+H(\lambda)=\lambda^{3}+P_{1}\lambda^{2}+P_{2}\lambda+P_{3}=(\lambda^{2}+P_{2})(\lambda+P_{1})=0.
+\end{equation}
+Thus, equation (\ref{eq411}) has a pair of pure imaginary characteristic roots and a negative root at $d_{1}=\tilde{d}_{1}$. Specifically, the roots are: $\lambda_{1}=\sqrt{P_{2}}i,\lambda_{2}=-\sqrt{P_{2}}i,\lambda_{3}=-P_{1}$. Next, we will verify the transversality condition for the Hopf bifurcation in system (2). First, we compute the partial derivative of the function (\ref{eq411}) with respect to $d_{1}$ as follows,
+\begin{equation}\label{eq413}
+\frac{\partial H(\lambda)}{\partial d_{1}}=(3\lambda^{2}+2P_{1}\lambda+P_{2})\lambda'+P_{1}'\lambda^{2}+P_{2}'\lambda+P_{3}'=0,
+\end{equation}
+further, we have
+\begin{equation*}
+\lambda'|_{\lambda=\lambda_{1,2}=\pm\sqrt{P_{2}}i}=\frac{\left(P_{2} P_{1}'\pm i P_{2}' \sqrt{P_{2}}+P_{3}'\right)\left(P_{2}\pm iP_{1} \sqrt{P_{2}}\right)}{2 P_{2} \left(P_{1}^{2}+P_{2}\right)},
+\end{equation*}
+where $'$ denotes the partial derivative concerning $d_{1}$. Hence, we get
+\begin{equation}\label{eq414}
+Re\left(\frac{\partial\lambda}{\partial d_{1}}|_{\lambda_{1,2}=\pm\sqrt{P_{2}}i}\right)=\frac{P_{1}'P_{2}}{P_{2}+P_{1}^{2}}|_{d_{1}=\tilde{d}_{1}}.
+\end{equation}
+From the condition $P_{1}'P_{2}\neq0$, then we have $Re(\frac{\partial\lambda}{\partial d_{1}})|_{d_{1}=\tilde{d}_{1}}\neq0$, which confirms that the transversality condition for the Hopf bifurcation is satisfied. Therefore, a Hopf bifurcation will occur at the interior equilibrium $\bar E$ of system (2) near the critical value $d_{1}=\tilde{d}_{1}$.
+\end{proof}
+
+\appendix{Stability and Direction of Hopf bifurcation}
+\begin{proof}
+We first perform a translation transformation on system (2), moving the boundary equilibrium
+$E_{1}(d_{1}^{0})=(\frac{\alpha_{1}-1}{2\alpha_{1}},\frac{(\alpha_{1}+1)^{2}}{4\alpha_{1}},0)$ to the origin. i.e.,
+\begin{equation}
+\left\{
+\begin{array}{l}
+x_{1}=x-\frac{\alpha_{1}-1}{2\alpha_{1}}\\
+x_{2}=y-\frac{(\alpha_{1}+1)^{2}}{4\alpha_{1}}\\
+x_{3}=z.\\
+\end{array}
+\right.
+\end{equation}
+Then, system (2) becomes system (\ref{eq8}) as follow:
+\begin{equation}\label{eq8}
+    \dot{X}=J_{E_{1}}(d_{1}^{0})X+F(X),X=(x_{1},x_{2},x_{3})^{T},F(X)=(F_{1},F_{2},F_{3})^{T},
+\end{equation}
+where $F_{i}(X)(i=1,2,3)$ are the non-linear terms of the right hand functions of (\ref{eq8}), detailed as follows:
+\begin{equation*}
+\begin{aligned}
+F_{1}&=-\frac{x_{1}^{2} \left(\alpha_{1}-1\right)}{\alpha_{1}+1}-\frac{4 x_{1} x_{2}}{\left(\alpha_{1}+1\right)^{2}}-\frac{4\alpha_{1}^{2} x_{1} x_{3} }{\left(\left(\alpha_{2}+2\right) \alpha_{1}-\alpha_{2}\right)^{2}}
+-\frac{4\alpha_{1} x_{1}^{3} }{\left(\alpha_{1}+1\right)^{2}}
++\frac{8\alpha_{1} x_{1}^{2} x_{2}}
+{\left(\alpha_{1}+1\right)^{3}}
+\\&~~~
++\frac{8 \alpha_{2} \alpha_{1}^{3}x_{1}^{2} x_{3} }{\left(\left(\alpha_{2}+2\right) \alpha_{1}-\alpha_{2}\right)^{3}}+O\left(X^{4}\right),\\
+F_{2}&=-\frac{2 \gamma_{1} x_{1}^{2}}{\alpha_{1}+1}+\frac{4 \gamma_{1} x_{1} x_{2}}{\left(\alpha_{1}+1\right)^{2}}-\frac{16 \gamma_{1}  e_{1} \alpha_{1}^{2}x_{2} x_{3}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}
++\frac{4 \alpha_{1} \gamma_{1} x_{1}^{3}}{\left(\alpha_{1}+1\right)^{2}}-\frac{8 \gamma_{1} \alpha_{1} x_{1}^{2} x_{2}}{\left(\alpha_{1}+1\right)^{3}}
+\\&
+~~~+\frac{64 \gamma_{1}e_{1} h \alpha_{1}^{3} x_{2}^{2} x_{3}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{3}}+O\left(X^{4}\right),\\
+F_{3}&=\frac{4 \gamma_{2} \alpha_{1}^{2} x_{1} x_{3}}{\left(\left(\alpha_{2}+2\right) \alpha_{1}-\alpha_{2}\right)^{2}}+\frac{16 e_{2} \gamma_{2} \alpha_{1}^{2}x_{2} x_{3} }{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}
+-\frac{8 \gamma_{2} \alpha_{2} \alpha_{1}^{3}x_{1}^{2} x_{3} }{\left(\left(\alpha_{2}+2\right) \alpha_{1}-\alpha_{2}\right)^{3}}
+\\&~~~
+-\frac{64 e_{2} \gamma_{2}\alpha_{1}^{3} h x_{2}^{2} x_{3} }{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{3}}+O \left(X^{4}\right).
+\end{aligned}
+\end{equation*}
+Secondly, introduce an invertible transformation as follows:
+\begin{equation*}
+(x_{1},x_{2},x_{3})^{T}=P(y_{1},y_{2},y_{3})^{T},
+ \end{equation*}
+where
+\begin{equation*}
+P=\left(
+  \begin{array}{ccc}
+    \xi_{1} & -\frac{\sqrt{\alpha_{1}^2-1}}{\sqrt{\gamma_{1}}(1+\alpha_{1})}
+    &\frac{\sqrt{\alpha_{1}^2-1}}{\sqrt{\gamma_{1}}(1+\alpha_{1})}  \\
+    \xi_{2}& 1 & 1 \\
+    1 & 0 & 0 \\
+  \end{array}
+\right),
+        \end{equation*}
+\begin{equation*}
+\begin{aligned}
+\xi_{1}&=\{\left(\alpha_{1}-1\right) \left(\alpha_{1}+1\right) \left(h \alpha_{1}^{2}+2 h \alpha_{1}+h +4 \alpha_{1}\right) [e_{1} \left(\alpha_{1}+1\right) \left(\alpha_{1} \alpha_{2}+2 \alpha_{1}-\alpha_{2}\right)^{2} (h \alpha_{1}^{2}+2 h \alpha_{1}
+\\&
++h +4 \alpha_{1}) \gamma_{1}+4 \alpha_{1}^{2} \gamma_{2} \left(h +1\right)(h \alpha_{1}^{3} \alpha_{2} d_{2}+2 h \alpha_{1}^{3} d_{2}+h \alpha_{1}^{2} \alpha_{2} d_{2}-\alpha_{1}^{3} \alpha_{2} e_{2}-h \alpha_{1}^{3}+4 h \alpha_{1}^{2} d_{2}
+\\&
+-h \alpha_{1} \alpha_{2} d_{2}-2 \alpha_{1}^{3} e_{2}+4 \alpha_{1}^{2} \alpha_{2} d_{2}-\alpha_{1}^{2} \alpha_{2} e_{2}-h \alpha_{1}^{2}+2 h \alpha_{1} d_{2}-h \alpha_{2} d_{2}+8 \alpha_{1}^{2} d_{2}-4 \alpha_{1}^{2} e_{2}
+\\&
+-4 \alpha_{1} \alpha_{2} d_{2}+\alpha_{1} \alpha_{2} e_{2}+h \alpha_{1}-4 \alpha_{1}^{2}-2 \alpha_{1} e_{2}
++\alpha_{2} e_{2}+h +4 \alpha_{1})]\}/\{4 \left(h +1\right)[\left(\alpha_{1}-1\right)
+\\&
+ \left(h \alpha_{1}^{2}+2 h \alpha_{1}+h +4 \alpha_{1}\right)^{2}
+ \left(\alpha_{1} \alpha_{2}+2 \alpha_{1}-\alpha_{2}\right)^{2}\gamma_{1}
+ +\alpha_{1}^{2} \gamma_{2}^{2} \left(\alpha_{1}+1\right)\left(h \alpha_{1}^{3} \alpha_{2} d_{2}+2 h \alpha_{1}^{3} d_{2}-h \alpha_{1}^{2}
+\right.\\
+&\left.+h \alpha_{1}^{2} \alpha_{2} d_{2}-\alpha_{1}^{3} \alpha_{2} e_{2}-h \alpha_{1}^{3}+4 h \alpha_{1}^{2} d_{2}-h \alpha_{1} \alpha_{2} d_{2}-2 \alpha_{1}^{3} e_{2}+4 \alpha_{1}^{2} \alpha_{2} d_{2}-\alpha_{1}^{2} \alpha_{2} e_{2}+2 h \alpha_{1} d_{2}
+\right.\\
+&\left.-h \alpha_{2} d_{2}+8 \alpha_{1}^{2} d_{2}-4 \alpha_{1}^{2} e_{2}-4 \alpha_{1} \alpha_{2} d_{2}+\alpha_{1} \alpha_{2} e_{2}+h \alpha_{1}-4 \alpha_{1}^{2}-2 \alpha_{1} e_{2}+\alpha_{2} e_{2}+h +4 \alpha_{1}\right)^{2}]\},\\
+\xi_{2}&=\{\alpha_{1} \gamma_{1} \left(\alpha_{1}+1\right) \left(\alpha_{1} \alpha_{2}+2 \alpha_{1}-\alpha_{2}\right) \left(h \alpha_{1}^{2}+2 h \alpha_{1}+h +4 \alpha_{1}\right) [h \alpha_{1}^{5} \alpha_{2} d_{2} e_{1} \gamma_{2}+2 h \alpha_{1}^{5} d_{2} e_{1} \gamma_{2}
+\\&
++3 h \alpha_{1}^{4} \alpha_{2} d_{2} e_{1} \gamma_{2}-\alpha_{1}^{5} \alpha_{2} e_{1} e_{2} \gamma_{2}-h \alpha_{1}^{5} e_{1} \gamma_{2}+8 h \alpha_{1}^{4} d_{2} e_{1} \gamma_{2}+2 h \alpha_{1}^{3} \alpha_{2} d_{2} e_{1} \gamma_{2}-2 \alpha_{1}^{5} e_{1} e_{2} \gamma_{2}
+\\&
++4 \alpha_{1}^{4} \alpha_{2} d_{2} e_{1} \gamma_{2}-3 \alpha_{1}^{4} \alpha_{2} e_{1} e_{2} \gamma_{2}-3 h \alpha_{1}^{4} e_{1} \gamma_{2}+12 h \alpha_{1}^{3} d_{2} e_{1} \gamma_{2}-2 h \alpha_{1}^{2} \alpha_{2} d_{2} e_{1} \gamma_{2}+8 \alpha_{1}^{4} d_{2} e_{1} \gamma_{2}
+\\&
+-8 \alpha_{1}^{4} e_{1} e_{2} \gamma_{2}+4 \alpha_{1}^{3} \alpha_{2} d_{2} e_{1} \gamma_{2}
+-2 \alpha_{1}^{3} \alpha_{2} e_{1} e_{2} \gamma_{2}-2 h \alpha_{1}^{3} e_{1} \gamma_{2}+8 h \alpha_{1}^{2} d_{2} e_{1} \gamma_{2}-3 h \alpha_{1} \alpha_{2} d_{2} e_{1} \gamma_{2}
+\\&
+-4 \alpha_{1}^{4} e_{1} \gamma_{2}+16 \alpha_{1}^{3} d_{2} e_{1} \gamma_{2}-12 \alpha_{1}^{3} e_{1} e_{2} \gamma_{2}-4 \alpha_{1}^{2} \alpha_{2} d_{2} e_{1} \gamma_{2}+2 \alpha_{1}^{2} \alpha_{2} e_{1} e_{2} \gamma_{2}-4 h^{2} \alpha_{1}^{3}+2 h \alpha_{1}^{2} e_{1} \gamma_{2}
+\\&
++2 h \alpha_{1} d_{2} e_{1} \gamma_{2}-h \alpha_{2} d_{2} e_{1} \gamma_{2}-4 \alpha_{1}^{3} e_{1} \gamma_{2}+8 \alpha_{1}^{2} d_{2} e_{1} \gamma_{2}-8 \alpha_{1}^{2} e_{1} e_{2} \gamma_{2}-4 \alpha_{1} \alpha_{2} d_{2} e_{1} \gamma_{2}+3 \alpha_{1} \alpha_{2} e_{1} e_{2} \gamma_{2}
+\\&
+-4 h^{2} \alpha_{1}^{2}-4 h \alpha_{1}^{3}+3 h \alpha_{1} e_{1} \gamma_{2}+4 \alpha_{1}^{2} e_{1} \gamma_{2}
+-2 \alpha_{1} e_{1} e_{2} \gamma_{2}+\alpha_{2} e_{1} e_{2} \gamma_{2}+4 h^{2} \alpha_{1}-20 h \alpha_{1}^{2}+h e_{1} \gamma_{2}
+\\&
++4 \alpha_{1} e_{1} \gamma_{2}+4 h^{2}+20 h \alpha_{1}-16 \alpha_{1}^{2}+4 h +16 \alpha_{1}]\}/\{4 \left(h +1\right)[(\alpha_{1}-1)\left(h \alpha_{1}^{2}+2 h \alpha_{1}+h +4 \alpha_{1}\right)^{2}
+\\&
+(\alpha_{1} \alpha_{2}+2 \alpha_{1}-\alpha_{2})^{2} \gamma_{1}+\alpha_{1}^{2} \gamma_{2}^{2} \left(\alpha_{1}+1\right)(h \alpha_{1}^{3} \alpha_{2} d_{2}+2 h \alpha_{1}^{3} d_{2}+h \alpha_{1}^{2} \alpha_{2} d_{2}-\alpha_{1}^{3} \alpha_{2} e_{2}-h \alpha_{1}^{3}+4 h \alpha_{1}^{2} d_{2}\\
+&
+-h \alpha_{1} \alpha_{2} d_{2}-2 \alpha_{1}^{3} e_{2}+4 \alpha_{1}^{2} \alpha_{2} d_{2}-\alpha_{1}^{2} \alpha_{2} e_{2}-h \alpha_{1}^{2}+2 h \alpha_{1} d_{2}-h \alpha_{2} d_{2}+8 \alpha_{1}^{2} d_{2}-4 \alpha_{1}^{2} e_{2}-4 \alpha_{1} \alpha_{2} d_{2}
+\\&
++\alpha_{1} \alpha_{2} e_{2}+h \alpha_{1}-4 \alpha_{1}^{2}-2 \alpha_{1} e_{2}+\alpha_{2} e_{2}+h +4 \alpha_{1})^{2}]\}.
+\end{aligned}
+\end{equation*}
+Then, system (\ref{eq8}) becomes
+\begin{equation}\label{eq9}
+    \dot{Y}=P^{-1}J_{E_{1}}(d_{1}^{0})PY+Q, Y=(y_{1},y_{2},y_{3})^{T}, Q=(Q^{1},Q^{2},Q^{3})^{T},
+\end{equation}
+where
+\begin{equation*}
+P^{-1}J_{E_{1}}(d_{1}^{0})P=\left(
+                   \begin{array}{ccc}
+                     \beta &
+                    0  &
+                     0\\
+                    0 &
+                      -\frac{\sqrt{\gamma_{1}(\alpha_{1}^{2}-1)}}{\alpha_{1} \left(\alpha_{1}+1\right)}  & 0 \\
+                     0 & 0 & \frac{\sqrt{\gamma_{1}(\alpha_{1}^{2}-1)}}{\alpha_{1} \left(\alpha_{1}+1\right)}\\
+                   \end{array}
+                 \right),\\
+\end{equation*}
+{\footnotesize
+\begin{equation*}
+ \begin{aligned}
+ &\beta=\gamma_{2} \left(\frac{\alpha_{1}-1}{\left(\alpha_{2}+2\right) \alpha_{1}-\alpha_{2}}+\frac{e_{2} \left(\alpha_{1}+1\right)^{2}}{h \alpha_{1}^{2}+\left(2 h +4\right) \alpha_{1}+h}-d_{2}\right),\\
+&Q^{1}=\frac{4 \alpha_{1}^{2} \gamma_{2} y_{1} y_{3}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2}}+\frac{16 e_{2} \gamma_{2} \alpha_{1}^{2}y_{2} y_{3}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}
+                              +\frac{8 \alpha_{1}^{3} \alpha_{2} \gamma_{2} y_{1}^{2} y_{3}}{\left(\alpha_{2}
+                              -\left(\alpha_{2}+2\right) \alpha_{1}\right)^{3}}\\
+ &-\frac{64 e_{2} \gamma_{2} \alpha_{1}^{3} h y_{2}^{2} y_{3} }{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{3}}+O\left(Y^{4}\right),\\
+&Q^{2}=-\frac{\gamma_{1} y_{1}^{2}}{\alpha_{1}+1}+\frac{2 \gamma_{1} y_{1} y_{2}}{\left(\alpha_{1}+1\right)^{2}}-\frac{8 \gamma_{1} e_{1} \alpha_{1}^{2} y_{2} y_{3}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}
+                              -\frac{4 \gamma_{1}\alpha_{1} y_{1}^{2} y_{2} }{\left(\alpha_{1}+1\right)^{3}}\\
+                                \end{aligned}
+\end{equation*}
+                              \begin{equation*}
+ \begin{aligned}
+                              &+\frac{2 \alpha_{1} \gamma_{1} y_{1}^{3}}{\left(\alpha_{1}+1\right)^{2}}+\frac{1}{\sqrt{\alpha_{1}^{2}-1}}\left\{(\frac{\xi_{1} \sqrt{\gamma_{1}}}{2}-\frac{\xi_{2} \sqrt{\alpha_{1}^{2}-1}}{2}+\frac{\alpha_{1} \xi_{1} \sqrt{\gamma_{1}}}{2})\left[\frac{4\alpha_{1}^{2} \gamma_{2} y_{1} y_{3}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2}}\right.\right.\\
+                              &\left.\left.+\frac{8 \alpha_{1}^{3} \alpha_{2} \gamma_{2} y_{1}^{2} y_{3}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{3}}
+                              +\frac{16 e_{2} \gamma_{2}\alpha_{1}^{2} y_{2} y_{3} }{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}
+                              -\frac{64 e_{2} \gamma_{2}  \alpha_{1}^{3} hy_{2}^{2} y_{3} }{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{3}}\right]\right\}\\
+                              &+\frac{1}{2\sqrt{\alpha_{1}^{2}-1}}\left\{\sqrt{\gamma_{1}}\left(\alpha_{1}+1\right)
+                              \left[\frac{(\alpha_{1}-1)y_{1}^{2} }{\alpha_{1}+1}
+                              +\frac{4 y_{1} y_{2}}{\left(\alpha_{1}+1\right)^{2}}+\frac{4  \alpha_{1}y_{1}^{3} }{\left(\alpha_{1}+1\right)^{2}}-\frac{8\alpha_{1} y_{1}^{2} y_{2}}{\left(\alpha_{1}+1\right)^{3}}\right.\right.\\
+                              &\left.\left.+\frac{4 \alpha_{1}^{2} y_{1} y_{3}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2}}+\frac{8 \alpha_{1}^{3} \alpha_{2} y_{1}^{2} y_{3}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{3}}\right]\right\}+\frac{32 \gamma_{1}e_{1} h \alpha_{1}^{3} y_{2}^{2} y_{3} }{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{3}}+O\left(Y^{4}\right),\\
+Q^{3}&=-\frac{1}{\sqrt{\alpha_{1}^{2}-1}}\left\{(\frac{\xi_{1} \sqrt{\gamma_{1}}}{2}+\frac{\xi_{2} \sqrt{\alpha_{1}^{2}-1}}{2}+\frac{\alpha_{1} \xi_{1} \sqrt{\gamma_{1}}}{2})\left[\frac{4 \alpha_{1}^{2} \gamma_{2} y_{1} y_{3}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right)\alpha_{1}\right)^{2}}\right.\right.\\
+                              &\left.\left.+\frac{16 e_{2} \gamma_{2}\alpha_{1}^{2} y_{2} y_{3} }{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}
+                              +\frac{8 \alpha_{1}^{3} \alpha_{2} \gamma_{2} y_{1}^{2} y_{3}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{3}}-\frac{64 e_{2} \gamma_{2} \alpha_{1}^{3} h y_{2}^{2} y_{3}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{3}}\right]\right\}\\
+                              &-\frac{1}{2\sqrt{\alpha_{1}^{2}-1}}\left\{\sqrt{\gamma_{1}}\left(\alpha_{1}+1\right) \left[\frac{(\alpha_{1}-1)y_{1}^{2}}{\alpha_{1}+1}+\frac{4y_{1} y_{2}}{\left(\alpha_{1}+1\right)^{2}}+\frac{4\alpha_{1} y_{1}^{3}}{\left(\alpha_{1}+1\right)^{2}}-\frac{8\alpha_{1} y_{1}^{2} y_{2}}{\left(\alpha_{1}+1\right)^{3}}\right.\right.\\
+                              &\left.\left.+\frac{4 \alpha_{1}^{2} y_{1} y_{3}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2}}
+                              +\frac{8 \alpha_{1}^{3} \alpha_{2} y_{1}^{2} y_{3}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{3}}\right]\right\}-\frac{\gamma_{1} y_{1}^{2}}{\alpha_{1}+1}+\frac{2 \alpha_{1} \gamma_{1} y_{1}^{3}}{\left(\alpha_{1}+1\right)^{2}}+\frac{2 \gamma_{1} y_{1} y_{2}}{\left(\alpha_{1}+1\right)^{2}}\\
+                              &-\frac{4 \gamma_{1} y_{1}^{2} y_{2} \alpha_{1}}{\left(\alpha_{1}+1\right)^{3}}-\frac{8 \gamma_{1} y_{2} y_{3} e_{1} \alpha_{1}^{2}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}+\frac{32 \gamma_{1} y_{2}^{2} y_{3} e_{1} h \alpha_{1}^{3}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{3}}+O\left(Y^{4}\right).
+                              \end{aligned}
+\end{equation*}}
+Next, we calculate the following of the nonlinear terms
+\begin{align*}
+g_{20}(0,0,0)&=\frac{\sqrt{\gamma_{1} \left(\alpha_{1}^{2}-1\right)}}{\left(\alpha_{1}+1\right) \left(\alpha_{1}^{2}-1\right)}+\frac{2\gamma_{1}-i\gamma_{1} \left(\alpha_{1}+3\right) }{2\left(\alpha_{1}+1\right)^{2}}+\frac{i\left[\left(\alpha_{1}^{2}-5\right) \sqrt{\gamma_{1}}\sqrt{\alpha_{1}^{2}-1}\left(\alpha_{1}-1\right)\right]}{4 \left(\alpha_{1}+1\right)^{2} \left(\alpha_{1}-1\right)},\\
+g_{11}(0,0,0)&=\frac{i}{4} \left(-\frac{2 \gamma_{1}}{\alpha_{1}+1}+\frac{\sqrt{\gamma_{1} \left(\alpha_{1}^{2}-1\right)}}{\alpha_{1}+1}\right),~~W_{11}(0,0,0)=\frac{2 \gamma_{1}+\sqrt{\gamma_{1} \left(\alpha_{1}^{2}-1\right)}}{4 \beta_{1} \left(\alpha_{1}+1\right)},\\
+g_{02}(0,0,0)&=-\frac{\sqrt{\gamma_{1} \left(\alpha_{1}^{2}-1\right)}}{\left(\alpha_{1}+1\right) \left(\alpha_{1}^{2}-1\right)}-\frac{\gamma_{1}}{\left(\alpha_{1}+1\right)^{2}}+\frac{i \left(\left(\alpha_{1}^{2}+3\right) \sqrt{\gamma_{1}}\sqrt{\alpha_{1}^{2}-1}-2 \gamma_{1} \left(\alpha_{1}-1\right)^{2}\right)}{4 \left(\alpha_{1}+1\right)^{2} \left(\alpha_{1}-1\right)},\\
+g_{21}(0,0,0)&=G_{101} W_{20}+2 G_{110} W_{11}+G_{21},~~G_{21}=\frac{i}{8},\\
+G_{110}(0,0,0)&=\frac{2 \alpha_{1}^{2} \gamma_{2}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2}}+\frac{4 \left(-\xi_{2} \sqrt{\alpha_{1}^{2}-1}+\xi_{1} \sqrt{\gamma_{1}} \left(\alpha_{1}+1\right)\right) e_{2} \gamma_{2} \alpha_{1}^{2}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2} \sqrt{\alpha_{1}^{2}-1}},\\
+&-\frac{4 \gamma_{1} e_{1} \alpha_{1}^{2}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}
++i\left[\frac{(\xi_{1} \sqrt{\gamma_{1}}\left(\alpha_{1}-1\right)-\xi_{2} \sqrt{\alpha_{1}^{2}-1}) \alpha_{1}^{2} \gamma_{2}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2} \sqrt{\alpha_{1}^{2}-1}}\right.\\
+&\left.+\frac{\sqrt{\gamma_{1}} \left(\alpha_{1}+1\right) \alpha_{1}^{2}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2} \sqrt{\alpha_{1}^{2}-1}}-\frac{8 e_{2} \gamma_{2} \alpha_{1}^{2}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}\right],\\
+W_{20}(0,0,0)&=-\frac{(2i \sqrt{\gamma_{1}}\sqrt{\alpha_{1}^{2}-1}+\beta\alpha_{1}^{2}+\beta \alpha_{1}) \alpha_{1} }{\{\left(\alpha_{1}+1\right)
+\left(\beta^{2}\alpha_{1}^{3}+\beta^{2}\alpha_{1}^{2}+4 \alpha_{1} \gamma_{1}-4 \gamma_{1}\right)\}}
+\left\{\left[-\sqrt{\gamma_{1} \left(\alpha_{1}^{2}-1\right)}\alpha_{1}^{2}\right.\right.\\
+&\left.\left.+4i\alpha_{1} \gamma_{1}-2 \alpha_{1}^{2} \gamma_{1}
++4 i \sqrt{\gamma_{1}
+\left(\alpha_{1}^{2}-1\right)}
+-4i \gamma_{1}+\sqrt{\gamma_{1} \left(\alpha_{1}^{2}-1\right)}+2 \gamma_{1}\right]\right\},\\
+\end{align*}
+\begin{equation*}
+\begin{aligned}
+G_{101}(0,0,0)&=\frac{2\alpha_{1}^{2} \gamma_{2}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2}}-\frac{4 \left(-\xi_{2} \sqrt{\alpha_{1}^{2}-1}+\xi_{1} \sqrt{\gamma_{1}} \left(\alpha_{1}+1\right)\right) e_{2} \gamma_{2} \alpha_{1}^{2}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2} \sqrt{\alpha_{1}^{2}-1}}\\
+&+\frac{4 \gamma_{1} e_{1} \alpha_{1}^{2}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}+i\left[-\frac{\left(-\xi_{2} \sqrt{\alpha_{1}^{2}-1}+\xi_{1} \sqrt{\gamma_{1}}\left(\alpha_{1}+1\right)\right) \alpha_{1}^{2} \gamma_{2}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2} \sqrt{\alpha_{1}^{2}-1}}\right.\\
+&\left.-\frac{\sqrt{\gamma_{1}} \left(\alpha_{1}+1\right) \alpha_{1}^{2}}{\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2} \sqrt{\alpha_{1}^{2}-1}}+\frac{8 e_{2} \gamma_{2} \alpha_{1}^{2}}{\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}}\right].
+\end{aligned}
+               \end{equation*}
+Finally, according to [Singh et al. 2013], we have
+\begin{equation*}\label{eq481}
+\begin{aligned}
+l_{1}&=\frac{\alpha_{1}(\alpha_{1}+1)i}{2\sqrt{\gamma_{1}(\alpha_{1}^2-1)}}\left(g_{20}g_{11}-2|g_{11}|^{2}-\frac{1}{3}|g_{02}|^{2}\right)+\frac{g_{21}}{2},~l_{1}^{0}=Re\{l_{1}\},~\sigma=-\frac{4 l_{1}^{0}}{1-\alpha_{1}^2},\end{aligned}
+\end{equation*}
+where
+\begin{equation*}
+\begin{aligned}
+ &l_{1}^{0}=\{64 \alpha_{1}^{4} [(h^{2} \alpha_{1}^{4} \gamma_{2}+4 \gamma_{2} h \left(h +2\right) \alpha_{1}^{3}+(\left(2 \alpha_{2}^{2} e_{2} \xi_{2}+8 e_{2} \alpha_{2}\xi_{2}+6 h^{2}+8 e_{2} \xi_{2}+16 h +16\right) \gamma_{2}\\
+&+2 e_{1} \gamma_{1} \left(\alpha_{2}+2\right)^{2}) \alpha_{1}^{2}
++\left(\left(-4 \alpha_{2}^{2} e_{2} \xi_{2}-8 e_{2} \alpha_{2} \xi_{2}+4 h^{2}+8 h \right) \gamma_{2}-4 e_{1} \alpha_{2} \gamma_{1} \left(\alpha_{2}+2\right)\right) \alpha_{1}\\
+&+\left(2 \alpha_{2}^{2} e_{2} \xi_{2}+h^{2}\right) \gamma_{2}+2 \alpha_{2}^{2} e_{1} \gamma_{1})(\alpha_{1}^{2}-1)^{1/2}
+-2 \xi_{1} e_{2} \gamma_{2} \left(\left(\alpha_{2}+2\right) \alpha_{1}-\alpha_{2}\right)^{2} \left(\alpha_{1}+1\right)\gamma_{1}^{1/2}]\\
+&\{\{\beta\left(\alpha_{1}+1\right)^{2}\gamma_{1}^{1/2}+32 \gamma_{1}^{3} \left(\alpha_{1}-1\right)) \left(\alpha_{1}-1\right) (\alpha_{1}^{2}-1)^{1/2}\}/64+(\gamma_{1}^{5/2}
++ \beta\gamma_{1}/32)\alpha_{1}^{3}\\
+&+(-\gamma_{1}^{5/2}+\beta\gamma_{1}/32)\alpha_{1}^{2}
++(-\gamma_{1}^{5/2}-\beta\gamma_{1}/32)\alpha_{1}
++\gamma_{1}^{5/2}+\left(\alpha_{1}^{2}-1\right)^{3/2}\gamma_{1}^{2}/2
+-\beta \gamma_{1}/32\}\}\\
+&/\{\left(\alpha_{1}+1\right)(\alpha_{1}^{2}-1)^{1/2}(\alpha_{1}^{3} \beta^{2}+\alpha_{1}^{2} \beta^{2}
++4 \gamma_{1} (\alpha_{1}-1))(\alpha_{1} \alpha_{2}+2 \alpha_{1}-\alpha_{2})^{2}(\alpha_{1}^{2} h +2 h \alpha_{1}+h\\
+ &+4 \alpha_{1})^{2}\}-\{[12 \gamma_{1} \left(\alpha_{1}^{2}-2 \alpha_{1}-3\right) (\alpha_{1}^{2}-1)\gamma_{1}^{1/2}+12 \left(\alpha_{1}-2\gamma_{1}+1\right) \gamma_{1} \left(\alpha_{1}-1\right)\left(\alpha_{1}+1\right)] \alpha_{1}\}\\
+  &/\{384 \left(\alpha_{1}+1\right)^{3} \left(\alpha_{1}-1\right)
+[\gamma_{1}(\alpha_{1}^{2}-1)]^{1/2}\}+\{2 \gamma_{1}+[\gamma_{1}(\alpha_{1}^{2}-1)]^{1/2}\}
+/[{4 \beta \left(\alpha_{1}+1\right)}]\\
+&\{2 \alpha_{1}^{2} \gamma_{2}/[\left(\alpha_{2}-\left(\alpha_{2}+2\right) \alpha_{1}\right)^{2}]+[4(-\xi_{2}(\alpha_{1}^{2}-1)^{1/2}+\xi_{1} \gamma_{1}^{1/2}\left(\alpha_{1}+1\right)) e_{2}
+\gamma_{2}\alpha_{1}^{2}]\\
+&/[(\alpha_{1}^{2} h+\left(2 h +4\right) \alpha_{1}+h)^{2} (\alpha_{1}^{2}-1)^{1/2}]
+-4 \gamma_{1} e_{1} \alpha_{1}^{2}/[\left(\alpha_{1}^{2} h +\left(2 h +4\right) \alpha_{1}+h \right)^{2}]\}.
+\end{aligned}
+\end{equation*}
+Thus, according to [Singh et al. 2013], the limit cycle of system is unstable and the hopf bifurcation is subcritical if $\sigma<0$, and the limit cycle of system is stable and the hopf bifurcation is supercritical if $\sigma>0$. For the equilibrium $E_{2},\bar E$ can be derived similarly and will not be proved here.
+\end{proof}
+
+
+\end{document}
